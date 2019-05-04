@@ -1,0 +1,48 @@
+﻿ @model IEnumerable<AccauntingTables.Models.Table>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/__Layout.cshtml";
+}
+
+<!doctype html>
+<html>
+    <head>
+        <title>Бронирование столиков</title>
+        <link rel="stylesheet" href="~/css/Home/Index.css" />
+    </head>
+    <body>
+        <table id="TableList">
+            <tr>
+                <td>Номер столика</td>
+                <td>Количество мест</td>
+                <td>Цвет</td>
+                <td>Форма</td>
+                <td>Статус</td>
+                <td>Номер владельца</td>
+                <td></td>
+            </tr>
+            @foreach(var table in Model)
+            {
+                <tr>
+                    <td>@table.TableNumber</td>
+                    <td>@table.SeatsCount</td>
+                    <td>@table.Color</td>
+                    <td>@table.FormFactor</td>
+                    <td>@table.Status</td>
+                    <td>@table.OwnerId</td>
+                    <td>
+                        @if (table.Status == "Свободен")
+                        {
+                            @:<a href="/Home/MakeAReservation/?TableNumber=@table.TableNumber"><input type="button" value="Забронировать" id="TableListActionButton" /></a>
+                        }
+                        else
+                        {
+                            @:<a href="/Home/RemoveAReservation/?TableNumber=@table.TableNumber"><input type="button" value="Отменить" id="TableListActionButton" /></a>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </body>
+</html>
+

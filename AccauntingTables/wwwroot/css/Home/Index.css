@@ -1,0 +1,9 @@
+﻿#TableList{
+    width: 70%;
+    text-align: center;
+    background-color: beige;
+    margin-left: 15%;
+}
+#TableListActionButton{
+    width: 100%;
+}

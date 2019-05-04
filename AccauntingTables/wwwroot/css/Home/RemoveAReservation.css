@@ -1,0 +1,12 @@
+﻿body{
+    background-color: darkseagreen;
+}
+#RemovePageHeadline{
+    color: darkgreen;
+    text-align: center;
+}
+#BackButton{
+    font-size: large;
+    text-align: center;
+    position: center;
+}

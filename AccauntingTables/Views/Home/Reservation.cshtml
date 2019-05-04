@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Reservation";
+    Layout = "~/Views/Shared/__Layout.cshtml";
+}
+
+<!doctype html>
+<html>
+    <head>
+        <title>Забронировано</title>
+        <link rel="stylesheet" href="~/css/Home/Reservation.css" />
+    </head>
+    <body>
+        <h3 id="ReservationHeadline">Спасибо за выбор нашего ресторана</h3>
+        <h4>Информация о бронировании:</h4>
+        <p id="ReservationInfo">
+            Номер столика: @ViewBag.TableNumber<br />
+            Индивидуальный номер клиента: @ViewBag.OwnerID<br />
+            Имя клиента: @ViewBag.OwnerName<br />
+            Фамилия клиента: @ViewBag.OwnerSurname<br />
+            Отчество клиента: @ViewBag.OwnerPatronymiv<br />
+        </p>
+    </body>
+</html>
+

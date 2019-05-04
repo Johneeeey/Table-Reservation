@@ -1,0 +1,11 @@
+﻿body {
+    background-color: darkseagreen;
+}
+#ReservationInfo{
+    font-size: large;
+    text-align: center;
+}
+#ReservationHeadline {
+    text-align: center;
+    color: darkgreen;
+}

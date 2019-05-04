@@ -1,0 +1,10 @@
+﻿#MasterHeader {
+    width: 100%;
+    min-height: 200px;
+    background-color: lightcyan;
+}
+#MasterHeadline{
+    text-align: center;
+    color: cadetblue;
+    font-family:'Times New Roman', Times, serif;
+}

@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/__Layout/MasterStyle.css" />
+</head>
+<body>
+    <header id="MasterHeader">
+        <h1 id="MasterHeadline"><a href="/Home/Index">Бронирование столиков</a></h1>
+        <p id="MasterHeadlineTest" style="text-align: center; font-size: large;">
+            Министерство науки и высшего образования РФ<br>
+            Федеральное государственное бюджетное образовательное учреждение<br>
+            высшего образования «Владимирский государственный университет имени <br>
+            Александра Григорьевича и Николая Григорьевича Столетовых»<br>
+            Кафедра Физики и Прикладной Математики
+        </p>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
