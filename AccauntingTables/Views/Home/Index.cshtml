@@ -10,7 +10,7 @@
         <title>Бронирование столиков</title>
         <link rel="stylesheet" href="~/css/Home/Index.css" />
     </head>
-    <body>
+    <body>   
         <table id="TableList">
             <tr>
                 <td>Номер столика</td>
@@ -21,7 +21,7 @@
                 <td>Номер владельца</td>
                 <td></td>
             </tr>
-            @foreach(var table in Model)
+            @foreach (var table in Model)
             {
                 <tr>
                     <td>@table.TableNumber</td>
@@ -43,6 +43,9 @@
                 </tr>
             }
         </table>
+        <div id="idxRoot">
+            <script type="text/babel" src="~/js/Home/index.jsx"></script>
+        </div>
     </body>
 </html>
 
