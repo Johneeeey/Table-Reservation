@@ -16,6 +16,11 @@ namespace AccauntingTables.Controllers
             db = tableContext;
         }
 
+        public IEnumerable<Table> GetTables()
+        {
+            return db.Table.ToList();
+        }
+
         public IActionResult Index()
         {
             return View(db.Table.ToList());

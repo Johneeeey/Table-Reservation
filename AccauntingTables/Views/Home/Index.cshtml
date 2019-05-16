@@ -11,38 +11,44 @@
         <link rel="stylesheet" href="~/css/Home/Index.css" asp-append-version="true"/>
     </head>
     <body>   
-        <table id="TableList">
-            <tr>
-                <td>Номер столика</td>
-                <td>Количество мест</td>
-                <td>Цвет</td>
-                <td>Форма</td>
-                <td>Статус</td>
-                <td>Номер владельца</td>
-                <td></td>
-            </tr>
-            @foreach (var table in Model)
-            {
-                <tr>
-                    <td>@table.TableNumber</td>
-                    <td>@table.SeatsCount</td>
-                    <td>@table.Color</td>
-                    <td>@table.FormFactor</td>
-                    <td>@table.Status</td>
-                    <td>@table.OwnerId</td>
-                    <td>
-                        @if (table.Status == "Свободен")
-                        {
-                            @:<a href="/Home/MakeAReservation/?TableNumber=@table.TableNumber"><input type="button" value="Забронировать" id="TableListActionButton" /></a>
-                        }
-                        else
-                        {
-                            @:<a href="/Home/RemoveAReservation/?TableNumber=@table.TableNumber"><input type="button" value="Отменить" id="TableListActionButton" /></a>
-                        }
-                    </td>
-                </tr>
-            }
-        </table>
+        @*<div class="table-responsive container">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Номер столика</th>
+                        <th>Количество мест</th>
+                        <th>Цвет</th>
+                        <th>Форма</th>
+                        <th>Статус</th>
+                        <th>Номер владельца</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var table in Model)
+                    {
+                        <tr>
+                            <td>@table.TableNumber</td>
+                            <td>@table.SeatsCount</td>
+                            <td>@table.Color</td>
+                            <td>@table.FormFactor</td>
+                            <td>@table.Status</td>
+                            <td>@table.OwnerId</td>
+                            <td>
+                                @if (table.Status == "Свободен")
+                                {
+                                    @:<a href="/Home/MakeAReservation/?TableNumber=@table.TableNumber"><input type="button" value="Забронировать" id="TableListActionButton" /></a>
+                                }
+                                else
+                                {
+                                    @:<a href="/Home/RemoveAReservation/?TableNumber=@table.TableNumber"><input type="button" value="Отменить" id="TableListActionButton" /></a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>*@
         <div id="idxRoot">
             <script type="text/babel" src="~/js/Home/index.jsx" asp-append-version="true"></script>
         </div>
